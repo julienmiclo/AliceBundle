@@ -2,7 +2,7 @@ AliceBundle
 ===========
 
 A [Symfony](http://symfony.com) bundle to manage fixtures with [nelmio/alice](https://github.com/nelmio/alice) and
-[fzaninotto/Faker](https://github.com/fzaninotto/Faker).
+[FakerPHP/Faker](https://github.com/FakerPHP/Faker/).
 
 The database support is done in [FidryAliceDataFixtures](https://github.com/theofidry/AliceDataFixtures). Check this
 project to know which database/ORM is supported.
@@ -73,7 +73,7 @@ With [Symfony Flex](https://symfony.com/doc/current/setup/flex.html) (recommende
 # If you do not have Doctrine installed yet:
 composer require doctrine-orm
 
-composer require --dev hautelook/alice-bundle 
+composer require --dev hautelook/alice-bundle
 ```
 
 You're ready to use AliceBundle, and can jump to the next section!
@@ -92,7 +92,7 @@ public function registerBundles()
         // ...
         new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
     ];
-    
+
     if (in_array($this->getEnvironment(), ['dev', 'test'])) {
         //...
         $bundles[] = new Nelmio\Alice\Bridge\Symfony\NelmioAliceBundle();
